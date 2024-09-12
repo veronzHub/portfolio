@@ -63,15 +63,16 @@ export default function Contact() {
             </div>
           </motion.div>
           <motion.div
-            className="w-full md:w-1/2 flex justify-end"
+            className="w-full md:w-1/2 flex justify-end pr-1"
             variants={itemVariants}
           >
             <div className="relative md:-mr-10">
               <Image
-                src="/contact-g-3.png"
+                src="/contact-g-4.png"
                 width={778}
                 height={788}
                 alt="Contact Girl"
+                className="object-contain w-full h-auto"
               />
             </div>
           </motion.div>
