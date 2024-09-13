@@ -63,7 +63,7 @@ export default function Hero() {
                 <span className="text-accent font-bold">
                   Front-End Developer
                 </span>{" "}
-                based in Seattle, Washington. I have eight years of experience
+                based in Seattle, Washington. I have five years of experience
                 crafting intuitive and engaging web experiences. I&apos;m
                 currently diving into the worlds of Web3 and AI. Let&apos;s
                 connect!
