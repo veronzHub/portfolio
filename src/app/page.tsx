@@ -42,11 +42,11 @@ export default function Home() {
         }}
       ></motion.div>
 
-      <Hero />
+      {/* <Hero />
       <Projects />
       <Experience />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
