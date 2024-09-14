@@ -1,4 +1,21 @@
 /* Base Tailwind Config */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
 
 /* Global Styles */
 html {
@@ -17,7 +34,7 @@ body {
 /* Typography */
 h1,
 h3 {
-  font-family: "Blomberg", sans-serif;
+  font-family: "Blomberg", var(--font-blomberg), sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -148,4 +165,10 @@ footer {
 input:focus,
 textarea:focus {
   border: 1px solid #3155d8;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
