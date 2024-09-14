@@ -8,7 +8,9 @@
 
 @font-face {
   font-family: "Blomberg";
-  src: url("/fonts/Blomberg-8MKKZ.otf") format("opentype");
+  src: url("/fonts/Blomberg-8MKKZ.woff2") format("woff2"),
+    url("/fonts/Blomberg-8MKKZ.woff") format("woff"),
+    url("/fonts/Blomberg-8MKKZ.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
