@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { RocknRoll_One, Roboto } from "next/font/google";
 
-
-
-
 const rocknRollOne = RocknRoll_One({
   weight: "400",
   subsets: ["latin"],
@@ -33,10 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${rocknRollOne.variable} ${roboto.variable} ${blombergFont.variable}`}
-    >
+    <html lang="en" className={`${rocknRollOne.variable} ${roboto.variable}`}>
       <body className="base-100">{children}</body>
     </html>
   );
