@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
 import { RocknRoll_One, Roboto } from "next/font/google";
-import localFont from "next/font/local";
 
-const blombergFont = localFont({
-  src: "./fonts/BLOMBERG2.woff2",
-  weight: "normal",
-  style: "normal",
-  variable: "--font-blomberg",
-});
+
+
 
 const rocknRollOne = RocknRoll_One({
   weight: "400",
