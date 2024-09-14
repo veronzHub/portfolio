@@ -16,7 +16,6 @@ const config: Config = {
           secondary: "#3155d8", // blue
           accent: "#d43fc4", // bright pink
           neutral: "#5a5a5a", // light grey
-          "base-100": "#8acfff", // light blue
           info: "#3ABFF8", // reg
           success: "#22C55E", // reg
           warning: "#F59E08", // reg
