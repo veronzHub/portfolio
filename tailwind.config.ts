@@ -7,11 +7,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        blombergF: ["var(--font-blomberg)"],
-      },
-    },
+    extend: {},
   },
   daisyui: {
     themes: [
