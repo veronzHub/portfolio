@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./globals.css";
 import { RocknRoll_One, Roboto } from "next/font/google";
 import localFont from "next/font/local";
 
@@ -21,8 +22,6 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-import "./globals.css";
-
 export const metadata: Metadata = {
   title: "Veronica Coulombe - Front-End Web Developer",
   description:
@@ -42,7 +41,7 @@ export default function RootLayout({
       lang="en"
       className={`${rocknRollOne.variable} ${roboto.variable} ${blombergFont.variable}`}
     >
-      <body className="base-100">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
