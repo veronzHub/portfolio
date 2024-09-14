@@ -21,6 +21,8 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
+import "./globals.css";
+
 export const metadata: Metadata = {
   title: "Veronica Coulombe - Front-End Web Developer",
   description:
