@@ -1,7 +1,4 @@
 /* Base Tailwind Config */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Global Styles */
 html {
@@ -9,6 +6,7 @@ html {
 }
 
 body {
+  font-family: var(--font-rocknRoll-one), sans-serif;
   font-weight: 100;
   font-style: normal;
   color: #213445;
@@ -19,6 +17,7 @@ body {
 /* Typography */
 h1,
 h3 {
+  font-family: "Blomberg", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
