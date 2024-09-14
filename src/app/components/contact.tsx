@@ -48,7 +48,7 @@ export default function Contact() {
               Contact Me
             </h3>
             <div className="bg-[rgba(255,255,255,0.8)] text-black p-10 rounded-md">
-              {/* <ContactForm /> */}
+              <ContactForm />
             </div>
           </motion.div>
 
