@@ -2,8 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -17,7 +16,6 @@ const config: Config = {
           secondary: "#3155d8", // blue
           accent: "#d43fc4", // bright pink
           neutral: "#5a5a5a", // light grey
-          "base-100": "#8acfff", // light blue
           info: "#3ABFF8", // reg
           success: "#22C55E", // reg
           warning: "#F59E08", // reg
