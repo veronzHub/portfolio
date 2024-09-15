@@ -4,10 +4,20 @@ import { RocknRoll_One, Roboto } from "next/font/google";
 import localFont from "next/font/local";
 
 const blombergFont = localFont({
-  src: "./fonts/BLOMBERG.woff",
-  weight: "normal",
-  style: "normal",
+  src: [
+    {
+      path: "./fonts/BLOMBERG.woff2",
+      weight: "normal",
+      style: "normal",
+    },
+    {
+      path: "./fonts/BLOMBERG.woff",
+      weight: "normal",
+      style: "normal",
+    },
+  ],
   variable: "--font-blomberg",
+  display: "swap",
 });
 
 const rocknRollOne = RocknRoll_One({
