@@ -10,7 +10,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const containerVariants = {
   visible: {
     transition: {
-      staggerChildren: 0.3,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -46,12 +46,9 @@ export default function Hero() {
           animate="visible"
           variants={containerVariants}
         >
-          <motion.h1
-            className="text-primary pt-14 pb-4 lg:text-8xl text-7xl md:text-left text-center md:mb-10"
-            variants={itemVariants}
-          >
+          <h1 className="text-secondary md:pt-20 pt-14 md:pb-4 text-center md:mb-4 font-bold w-full tracking-wide text-6xl md:text-clamp md:whitespace-nowrap box-border ">
             Veronica Coulombe
-          </motion.h1>
+          </h1>
 
           <div className="flex justify-left items-center relative md:flex-row flex-col pb-12 md:pt-0 md:pb-20">
             <motion.div
@@ -99,7 +96,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.div
-              className="order-1 md:absolute md:-right-32 lg:-right-20 md:-top-30"
+              className="order-1 md:absolute md:-right-32 lg:-right-10 md:-top-20"
               variants={itemVariants}
             >
               <Image

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { RocknRoll_One, Roboto } from "next/font/google";
-import localFont from "next/font/local";
-
-const blombergFont = localFont({
-  src: "./fonts/BLOMBERG.woff",
-  weight: "normal",
-  style: "normal",
-  variable: "--font-blomberg",
-});
+import {
+  RocknRoll_One,
+  Roboto,
+  Bangers,
+  Luckiest_Guy,
+  Sriracha,
+  Rampart_One,
+  Atma,
+  Mogra,
+} from "next/font/google";
 
 const rocknRollOne = RocknRoll_One({
   weight: "400",
@@ -20,6 +21,12 @@ const roboto = Roboto({
   weight: ["300", "400", "700"],
   subsets: ["latin"],
   variable: "--font-roboto",
+});
+
+const mogra = Mogra({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-mogra",
 });
 
 export const metadata: Metadata = {
@@ -39,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${rocknRollOne.variable} ${roboto.variable} ${blombergFont.variable}`}
+      className={`${rocknRollOne.variable} ${roboto.variable}  ${mogra.variable}`}
     >
       <body>{children}</body>
     </html>

@@ -24,9 +24,15 @@ body {
 /* Typography */
 h1,
 h3 {
-  font-family: "Blomberg", var(--font-blomberg), sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-family: var(--font-mogra), sans-serif;
+  text-transform: uppercase;
+  /* font-weight: 700;
+  width: 100%;
+  letter-spacing: 3px;
+  font-size: clamp(20px, 9vw, 82px);
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-sizing: border-box; */
 }
 
 h1 {
@@ -55,8 +61,6 @@ h3 {
     hsl(216deg 71% 54%) 90%,
     hsl(227deg 65% 50%) 100%
   );
-  height: 100%;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;

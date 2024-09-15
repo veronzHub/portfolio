@@ -6,7 +6,14 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      letterSpacing: {
+        wide: "3px", // Custom letter spacing
+      },
+      fontSize: {
+        clamp: "clamp(20px, 9vw, 82px)", // Add custom font-size using clamp
+      },
+    },
   },
   daisyui: {
     themes: [
