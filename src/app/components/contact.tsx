@@ -56,7 +56,7 @@ export default function Contact() {
             className="w-full md:w-1/2 flex justify-end items-end pr-1"
             variants={itemVariants}
           >
-            <div className="relative md:-mr-10 self-end">
+            <div>
               <Image
                 src="/contact-g-4.png"
                 width={778}
