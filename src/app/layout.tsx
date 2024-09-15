@@ -6,12 +6,17 @@ import localFont from "next/font/local";
 const blombergFont = localFont({
   src: [
     {
-      path: "./fonts/BLOMBERG.woff2",
+      path: "./fonts/BLOMBERG2.woff2",
       weight: "normal",
       style: "normal",
     },
     {
-      path: "./fonts/BLOMBERG.woff",
+      path: "./fonts/BLOMBERG2.woff",
+      weight: "normal",
+      style: "normal",
+    },
+    {
+      path: "./fonts/BLOMBERG2.ttf",
       weight: "normal",
       style: "normal",
     },
