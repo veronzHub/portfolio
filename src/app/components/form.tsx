@@ -116,13 +116,17 @@ export default function ContactForm() {
                 />
               </div>
 
-              <HCaptcha
-                sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
-                onVerify={(token: string) => {
-                  setCaptchaToken(token);
-                  setCaptchaError(false);
-                }}
-              />
+              <div className="flex items-center justify-center">
+                <HCaptcha
+                  sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
+                  onVerify={(token: string) => {
+                    setCaptchaToken(token);
+                    setCaptchaError(false);
+                  }}
+                  size="compact"
+                  theme="light"
+                />
+              </div>
               {captchaError && (
                 <div className="text-red-500 text-xs pt-1">
                   Please complete the CAPTCHA.
