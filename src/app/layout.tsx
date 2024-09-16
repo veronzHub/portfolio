@@ -32,7 +32,7 @@ export default function RootLayout({
     <html
       data-theme="mytheme"
       lang="en"
-      className={`${kalam.variable} ${nunito.variable}`}
+      className={`base-100 ${kalam.variable} ${nunito.variable}`}
     >
       <body>{children}</body>
     </html>
