@@ -32,8 +32,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-section overflow-x-hidden">
-      <div className="content container" ref={contentRef}>
+    <section id="contact" className="contact-section overflow-hidden">
+      <div className="content container " ref={contentRef}>
         <motion.div
           className="flex md:flex-row flex-col h-full relative"
           initial="hidden"
