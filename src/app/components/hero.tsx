@@ -49,7 +49,7 @@ export default function Hero() {
       <div className="hero-bg"></div>
       <section className="hero-section flex items-center overflow-hidden">
         <div className="container content relative">
-          <h1 className="text-secondary md:pt-20 pt-14 md:pb-4 md:mb-6 font-bold w-full text-6xl md:text-clamp md:whitespace-nowrap box-border">
+          <h1 className="text-secondary md:pt-20 pt-14 md:pb-4 md:mb-10 md:text-left text-center font-bold w-full text-6xl md:text-clamp md:whitespace-nowrap box-border">
             Veronica Coulombe
           </h1>
 

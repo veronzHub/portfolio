@@ -35,7 +35,7 @@ export default function Projects() {
     <section className="project-section pb-10 md:pb-20">
       <div className="container content" ref={contentRef}>
         <motion.h3
-          className="pt-10 pb-12 text-6xl text-center text-white"
+          className="pt-5 pb-12 text-6xl text-center text-white"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={contentVariants}
