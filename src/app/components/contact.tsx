@@ -33,9 +33,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact-section overflow-x-hidden">
-      <div className="content container overflow-hidden" ref={contentRef}>
+      <div className="content container" ref={contentRef}>
         <motion.div
-          className="flex md:flex-row flex-col h-full"
+          className="flex md:flex-row flex-col h-full relative"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={contentVariants}
@@ -53,18 +53,15 @@ export default function Contact() {
           </motion.div>
 
           <motion.div
-            className="w-full md:w-1/2 flex justify-end items-end pr-1"
+            className="md:absolute md:right-[-60px] bottom-0 z-100 md:w-[500px] h-auto z-20 text-center w-full"
             variants={itemVariants}
           >
-            <div>
-              <Image
-                src="/contact-g-4.png"
-                width={778}
-                height={788}
-                alt="Contact Girl"
-                className="object-contain w-full h-auto"
-              />
-            </div>
+            <Image
+              src="/contact-g-4.png"
+              width={778}
+              height={788}
+              alt="Contact Girl"
+            />
           </motion.div>
         </motion.div>
       </div>

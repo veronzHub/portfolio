@@ -59,9 +59,8 @@ export default function Hero() {
             animate="visible"
             variants={containerVariants}
           >
-            {/* Left Text Section */}
             <motion.div
-              className="w-full md:w-[400px] bg-[rgba(255,255,255,0.8)] rounded-md text-black p-10 relative text-justify order-2 z-10" // Ensures the text is behind the image
+              className="w-full md:w-[400px] bg-[rgba(255,255,255,0.8)] rounded-md text-black p-10 relative text-justify order-2 z-10"
               variants={textVariants}
             >
               <p className="text-xl">
@@ -104,9 +103,8 @@ export default function Hero() {
               </ul>
             </motion.div>
 
-            {/* Right Image Section */}
             <motion.div
-              className="order-1 md:absolute md:-right-32 lg:-right-10 md:-top-20 z-20" // z-index to ensure image is on top
+              className="order-1 md:absolute md:-right-32 lg:-right-10 md:-top-20 z-20"
               variants={imageVariants}
             >
               <Image
