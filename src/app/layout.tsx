@@ -1,32 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {
-  RocknRoll_One,
-  Roboto,
-  Bangers,
-  Luckiest_Guy,
-  Sriracha,
-  Rampart_One,
-  Atma,
-  Mogra,
-} from "next/font/google";
+import { Nunito, Kalam } from "next/font/google";
 
-const rocknRollOne = RocknRoll_One({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-rocknRoll-one",
-});
-
-const roboto = Roboto({
+const kalam = Kalam({
   weight: ["300", "400", "700"],
   subsets: ["latin"],
-  variable: "--font-roboto",
+  variable: "--font-kalam",
 });
 
-const mogra = Mogra({
-  weight: "400",
+const nunito = Nunito({
+  weight: ["300", "400", "700"],
   subsets: ["latin"],
-  variable: "--font-mogra",
+  variable: "--font-nunito",
 });
 
 export const metadata: Metadata = {
@@ -44,10 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${rocknRollOne.variable} ${roboto.variable}  ${mogra.variable}`}
-    >
+    <html lang="en" className={`${kalam.variable} ${nunito.variable}`}>
       <body>{children}</body>
     </html>
   );

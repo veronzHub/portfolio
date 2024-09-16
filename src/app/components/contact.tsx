@@ -32,10 +32,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact-section overflow-x-hidden">
-      <div className="content container overflow-hidden" ref={contentRef}>
+    <section id="contact" className="contact-section overflow-hidden">
+      <div className="content container " ref={contentRef}>
         <motion.div
-          className="flex md:flex-row flex-col h-full"
+          className="flex md:flex-row flex-col h-full relative"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={contentVariants}
@@ -44,7 +44,7 @@ export default function Contact() {
             className="w-full md:w-1/2 gap-10 z-10 overflow-auto pb-10"
             variants={itemVariants}
           >
-            <h3 className="pt-10 pb-12 text-6xl text-center text-white">
+            <h3 className="pt-6 pb-12 text-6xl text-center text-white">
               Contact Me
             </h3>
             <div className="bg-[rgba(255,255,255,0.8)] text-black p-10 rounded-md">
@@ -53,18 +53,15 @@ export default function Contact() {
           </motion.div>
 
           <motion.div
-            className="w-full md:w-1/2 flex justify-end items-end pr-1"
+            className="md:absolute md:right-[-60px] bottom-0 z-100 md:w-[500px] h-auto z-20 text-center w-full"
             variants={itemVariants}
           >
-            <div>
-              <Image
-                src="/contact-g-4.png"
-                width={778}
-                height={788}
-                alt="Contact Girl"
-                className="object-contain w-full h-auto"
-              />
-            </div>
+            <Image
+              src="/contact-g-4.png"
+              width={778}
+              height={788}
+              alt="Contact Girl"
+            />
           </motion.div>
         </motion.div>
       </div>

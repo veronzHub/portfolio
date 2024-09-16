@@ -103,7 +103,7 @@ export default function ContactForm() {
                   as="textarea"
                   name="message"
                   placeholder="Message"
-                  className={`border rounded-lg p-2 w-full h-32 ${
+                  className={`border rounded-lg p-2 resize-none w-full h-32 ${
                     errors.message && touched.message
                       ? "border-red-500"
                       : "border-gray-300"

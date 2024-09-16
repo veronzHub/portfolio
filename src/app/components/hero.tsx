@@ -15,18 +15,26 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 50 },
+const textVariants = {
+  hidden: { opacity: 0, x: -100 },
   visible: {
     opacity: 1,
-    y: 0,
+    x: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, x: 100 },
+  visible: {
+    opacity: 1,
+    x: 0,
     transition: { duration: 0.6 },
   },
 };
 
 export default function Hero() {
   const { scrollY } = useScroll();
-
   const y = useTransform(scrollY, [0, 500], [0, 100]);
 
   const handleScroll = () => {
@@ -39,21 +47,21 @@ export default function Hero() {
   return (
     <>
       <div className="hero-bg"></div>
-      <section className="hero-section  flex items-center overflow-hidden">
-        <motion.div
-          className="container content"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-        >
-          <h1 className="text-secondary md:pt-20 pt-14 md:pb-4 text-center md:mb-4 font-bold w-full tracking-wide text-6xl md:text-clamp md:whitespace-nowrap box-border ">
+      <section className="hero-section flex items-center overflow-hidden">
+        <div className="container content relative">
+          <h1 className="text-secondary md:pt-20 pt-14 md:pb-4 md:mb-10 md:text-left text-center font-bold w-full text-6xl md:text-clamp md:whitespace-nowrap box-border">
             Veronica Coulombe
           </h1>
 
-          <div className="flex justify-left items-center relative md:flex-row flex-col pb-12 md:pt-0 md:pb-20">
+          <motion.div
+            className="flex justify-left items-center relative md:flex-row flex-col pb-12 md:pt-0 md:pb-36"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
             <motion.div
-              className="w-full md:w-[400px] bg-[rgba(255,255,255,0.8)] rounded-md text-black p-10 relative text-justify order-2"
-              variants={itemVariants}
+              className="w-full md:w-[400px] bg-[rgba(255,255,255,0.8)] rounded-md text-black p-10 relative text-justify order-2 z-10"
+              variants={textVariants}
             >
               <p className="text-xl">
                 Hello! I&apos;m a{" "}
@@ -96,8 +104,8 @@ export default function Hero() {
             </motion.div>
 
             <motion.div
-              className="order-1 md:absolute md:-right-32 lg:-right-10 md:-top-20"
-              variants={itemVariants}
+              className="order-1 md:absolute md:-right-32 lg:-right-10 md:-top-20 z-20"
+              variants={imageVariants}
             >
               <Image
                 src="/hero-g-w-10.png"
@@ -107,8 +115,8 @@ export default function Hero() {
                 priority
               />
             </motion.div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
     </>
   );
