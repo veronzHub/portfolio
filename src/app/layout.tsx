@@ -29,7 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${kalam.variable} ${nunito.variable}`}>
+    <html
+      data-theme="mytheme"
+      lang="en"
+      className={`${kalam.variable} ${nunito.variable}`}
+    >
       <body>{children}</body>
     </html>
   );
