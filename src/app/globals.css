@@ -13,8 +13,8 @@ html {
 }
 
 body {
-  font-family: var(--font-rocknRoll-one), sans-serif;
-  font-weight: 100;
+  font-family: var(--font-nunito), sans-serif;
+  font-weight: 700;
   font-style: normal;
   color: #213445;
   position: relative;
@@ -24,15 +24,9 @@ body {
 /* Typography */
 h1,
 h3 {
-  font-family: var(--font-mogra), sans-serif;
+  font-family: var(--font-kalam), sans-serif;
   text-transform: uppercase;
-  /* font-weight: 700;
-  width: 100%;
-  letter-spacing: 3px;
-  font-size: clamp(20px, 9vw, 82px);
-  text-transform: uppercase;
-  white-space: nowrap;
-  box-sizing: border-box; */
+  font-weight: 700;
 }
 
 h1 {
@@ -47,29 +41,11 @@ h3 {
 
 /* Hero Section */
 .hero-section {
-  background-image: linear-gradient(
-    180deg,
-    hsl(306deg 63% 54%) 0%,
-    hsl(290deg 52% 63%) 10%,
-    hsl(261deg 53% 72%) 21%,
-    hsl(223deg 66% 75%) 31%,
-    hsl(204deg 86% 71%) 41%,
-    hsl(194deg 100% 65%) 51%,
-    hsl(198deg 91% 63%) 61%,
-    hsl(203deg 84% 60%) 71%,
-    hsl(208deg 77% 57%) 80%,
-    hsl(216deg 71% 54%) 90%,
-    hsl(227deg 65% 50%) 100%
-  );
+  background: linear-gradient(to bottom, #d54bc9 0%, #61d8fe 40%, #2d51d3 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-}
-
-.hero-section p {
-  font-size: 18px;
-  line-height: 30px;
 }
 
 .hero-image {
@@ -103,7 +79,7 @@ h3 {
 
 /* Project Section */
 .project-section {
-  background: linear-gradient(to bottom, #2d51d3 0%, #7e57c2 30%, #ff6f61 80%);
+  background: linear-gradient(to bottom, #2d51d3, #7e57c2, #ff6f61);
 }
 
 /* Experience Section */
