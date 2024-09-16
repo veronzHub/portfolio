@@ -8,10 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       letterSpacing: {
-        wide: "3px", // Custom letter spacing
+        wide: "3px",
       },
       fontSize: {
-        clamp: "clamp(20px, 9vw, 82px)", // Add custom font-size using clamp
+        clamp: "clamp(20px, 9vw, 82px)",
       },
     },
   },
@@ -19,14 +19,15 @@ const config: Config = {
     themes: [
       {
         mytheme: {
-          primary: "#213445", // dar grey
-          secondary: "#3155d8", // blue
-          accent: "#d43fc4", // bright pink
-          neutral: "#5a5a5a", // light grey
-          info: "#3ABFF8", // reg
-          success: "#22C55E", // reg
-          warning: "#F59E08", // reg
-          error: "#EF4444", // reg
+          primary: "#213445",
+          secondary: "#3155d8",
+          accent: "#d43fc4",
+          neutral: "#5a5a5a",
+          "base-100": "#75cefd",
+          info: "#3ABFF8",
+          success: "#22C55E",
+          warning: "#F59E08",
+          error: "#EF4444",
         },
       },
     ],
