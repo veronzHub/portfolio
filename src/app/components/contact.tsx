@@ -44,7 +44,7 @@ export default function Contact() {
             className="w-full md:w-1/2 gap-10 z-10 overflow-auto pb-10"
             variants={itemVariants}
           >
-            <h3 className="pt-10 pb-12 text-6xl text-center text-white">
+            <h3 className="pt-6 pb-12 text-6xl text-center text-white">
               Contact Me
             </h3>
             <div className="bg-[rgba(255,255,255,0.8)] text-black p-10 rounded-md">
