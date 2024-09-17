@@ -48,14 +48,12 @@ export default function ContactForm() {
   return (
     <>
       {submitted ? (
-        <>
-          <p className="text-center text-accent">
-            Thank you for your message!{" "}
-          </p>
+        <div className="w-full">
+          <p className="text-center text-accent">Thank you for your message!</p>
           <p className="text-center text-accent mt-5">
             I&apos;ll get back to you soon.
           </p>
-        </>
+        </div>
       ) : (
         <Formik
           initialValues={{ name: "", email: "", message: "" }}
@@ -63,7 +61,7 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
         >
           {({ isSubmitting, errors, touched }) => (
-            <Form>
+            <Form className="w-full">
               <div className="mb-5">
                 <Field
                   type="text"
