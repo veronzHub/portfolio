@@ -48,14 +48,12 @@ export default function ContactForm() {
   return (
     <>
       {submitted ? (
-        <>
-          <p className="text-center text-accent">
-            Thank you for your message!{" "}
-          </p>
+        <div className="w-full">
+          <p className="text-center text-accent">Thank you for your message!</p>
           <p className="text-center text-accent mt-5">
             I&apos;ll get back to you soon.
           </p>
-        </>
+        </div>
       ) : (
         <Formik
           initialValues={{ name: "", email: "", message: "" }}
