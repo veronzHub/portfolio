@@ -53,7 +53,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.div
-            className="md:absolute md:right-[-60px] bottom-0 z-100 md:w-[500px] h-auto z-20 text-center w-full"
+            className="md:absolute md:right-[-60px] bottom-0 z-100 md:w-[500px] h-auto z-20 text-center w-full pointer-events-none"
             variants={itemVariants}
           >
             <Image
