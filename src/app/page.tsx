@@ -24,13 +24,10 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
-  // Use different parallax intensity for mobile vs desktop
-  const isMobile = window.innerWidth <= 768; // Define mobile breakpoint
-
   const backgroundPositionY = useTransform(
     scrollY,
     [0, pageHeight],
-    isMobile ? ["0%", "30%"] : ["0%", "75%"] // Adjust the parallax effect on mobile
+    ["0%", "75%"]
   );
 
   return (
