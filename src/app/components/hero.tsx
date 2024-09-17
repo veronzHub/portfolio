@@ -5,33 +5,6 @@ import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
-import { motion } from "framer-motion";
-
-const containerVariants = {
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const textVariants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6 },
-  },
-};
-
-const imageVariants = {
-  hidden: { opacity: 0, x: 100 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6 },
-  },
-};
 
 export default function Hero() {
   function handleContactClick(e: React.MouseEvent<HTMLAnchorElement>) {
@@ -47,20 +20,12 @@ export default function Hero() {
       <div className="hero-bg"></div>
       <section className="hero-section flex items-center overflow-hidden">
         <div className="container content relative">
-          <h1 className="text-secondary md:pt-20 pt-14 md:pb-4 md:mb-10 md:text-left text-center font-bold w-full text-6xl md:text-clamp md:whitespace-nowrap box-border">
+          <h1 className="text-secondary md:pt-20 pt-14 md:pb-4 md:mb-10 md:text-left text-center font-bold w-full text-6xl md:text-clamp md:whitespace-nowrap box-border fade-in">
             Veronica Coulombe
           </h1>
 
-          <motion.div
-            className="flex justify-left items-center relative md:flex-row flex-col pb-12 md:pt-0 md:pb-36"
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-          >
-            <motion.div
-              className="w-full md:w-[400px] bg-[rgba(255,255,255,0.8)] rounded-md text-black p-10 relative text-justify order-2 z-10"
-              variants={textVariants}
-            >
+          <div className="flex justify-left items-center relative md:flex-row flex-col pb-12 md:pt-0 md:pb-36">
+            <div className="w-full md:w-[400px] bg-[rgba(255,255,255,0.8)] rounded-md text-black p-10 relative text-justify order-2 z-10 slide-in-left">
               <p className="text-xl">
                 Hello! I&apos;m a{" "}
                 <span className="text-accent font-bold">
@@ -100,12 +65,9 @@ export default function Hero() {
                   </Link>
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="order-1 md:absolute md:-right-32 lg:-right-10 md:-top-20 z-20 pointer-events-none"
-              variants={imageVariants}
-            >
+            <div className="order-1 md:absolute md:-right-32 lg:-right-10 md:-top-20 z-20 pointer-events-none slide-in-right">
               <Image
                 src="/hero-g-w-10.png"
                 alt="Hero Image"
@@ -113,8 +75,8 @@ export default function Hero() {
                 height={574}
                 priority
               />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
     </>
