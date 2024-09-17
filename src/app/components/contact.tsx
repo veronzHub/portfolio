@@ -47,13 +47,13 @@ export default function Contact() {
             <h3 className="pt-6 pb-12 text-6xl text-center text-white">
               Contact Me
             </h3>
-            <div className="bg-[rgba(255,255,255,0.8)] text-black p-10 rounded-md">
+            <div className="flex items-center bg-[rgba(255,255,255,0.8)] text-black p-10 rounded-md min-h-[580px]">
               <ContactForm />
             </div>
           </motion.div>
 
           <motion.div
-            className="md:absolute md:right-[-60px] bottom-0 z-100 md:w-[500px] h-auto z-20 text-center w-full pointer-events-none"
+            className="md:absolute md:right-[-60px] bottom-0 z-100 md:w-[500px] h-auto z-20 text-center w-full"
             variants={itemVariants}
           >
             <Image

@@ -63,7 +63,7 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
         >
           {({ isSubmitting, errors, touched }) => (
-            <Form>
+            <Form className="w-full">
               <div className="mb-5">
                 <Field
                   type="text"
