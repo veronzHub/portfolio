@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Veronica's Portfolio Website
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This portfolio showcases my skills and experience as a Front-End Developer, including completed projects, technologies used, and contact information.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Live Website**: [veronicacoulombe.com](https://veronicacoulombe.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: For server-side rendering and a seamless React experience.
+- **Supabase**: Backend for handling the contact form submissions and database.
+- **Framer Motion**: For animations and transitions throughout the site.
+- **Formik**: For form handling in the contact section.
+- **hCaptcha**: Used in the contact form for bot protection.
+- **DaisyUI**: Tailwind CSS-based UI components for styling.
+- **Tailwind CSS**: Utility-first CSS framework for responsive and custom design.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Design Elements
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Stable Diffusion**: Generated the two images of the girls using a custom trained LORA.
+- **Photoshop**: Created the star and bubble backgrounds using Photoshop brushes found on DeviantArt:
+  - [Bubbles](https://www.deviantart.com/twinklepowderysnow/art/Bubble-Brushes-167392649)
+  - [Sparkles](https://www.deviantart.com/redheadstock/art/Sparklies-Photoshop-and-GIMP-Brushes-67557195)
+  - [Glitter and smoke](https://www.deviantart.com/redheadstock/art/Glitter-n-Smoke-Photoshop-and-GIMP-Brushes-413431954)
