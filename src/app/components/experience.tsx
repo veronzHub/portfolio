@@ -67,13 +67,13 @@ export default function Experience() {
               integration of artwork and UI/UX elements.
             </p>
             <p>
-              <Link
-                href={"/Veronica-Coulombe-Resume_Redacted.pdf"}
+              <a
+                href="/Veronica-Coulombe-Resume_Redacted.pdf"
                 className="bg-secondary text-white p-4 rounded-md inline-block w-full text-center transition-transform duration-200 ease-in-out hover:brightness-125 hover:scale-105 active:scale-95"
                 target="_blank"
               >
                 View Full Resume
-              </Link>
+              </a>
             </p>
           </div>
         </motion.div>
