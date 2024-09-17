@@ -147,7 +147,7 @@ h3 {
 .stars-bg {
   background-image: url("/stars-bg.png");
   background-size: cover;
-  background-position: bottom -5px;
+  background-position: center;
   background-repeat: no-repeat;
   position: fixed;
   background-attachment: fixed;
