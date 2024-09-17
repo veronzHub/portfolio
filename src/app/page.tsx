@@ -24,10 +24,14 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
+  // Handle parallax differently for mobile vs desktop
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+
+  // Maintain parallax effect using `backgroundPositionY` for desktop, and `transform` for mobile
   const backgroundPositionY = useTransform(
     scrollY,
     [0, pageHeight],
-    ["0%", "75%"]
+    isMobile ? ["0px", "200px"] : ["0%", "75%"]
   );
 
   return (
@@ -35,11 +39,12 @@ export default function Home() {
       <motion.div
         className="stars-bg"
         style={{
-          backgroundPositionY,
+          backgroundPositionY: !isMobile ? backgroundPositionY : undefined,
+          transform: isMobile
+            ? `translateY(${backgroundPositionY})`
+            : undefined,
         }}
-        initial={{
-          backgroundPositionY: "0%",
-        }}
+        initial={{ backgroundPositionY: "0%" }}
       ></motion.div>
 
       <Hero />
