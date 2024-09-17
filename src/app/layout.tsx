@@ -29,7 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${kalam.variable} ${nunito.variable}`}>
+    <html
+      lang="en"
+      className={`${kalam.variable} ${nunito.variable} scroll-smooth`}
+    >
       <body>{children}</body>
     </html>
   );

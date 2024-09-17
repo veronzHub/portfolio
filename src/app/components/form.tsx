@@ -135,7 +135,7 @@ export default function ContactForm() {
 
               <button
                 type="submit"
-                className="bg-primary text-white p-3 rounded-md w-full mt-5"
+                className="bg-primary text-white p-3 rounded-md w-full mt-5 transition-transform duration-200 ease-in-out hover:brightness-125 hover:scale-105 active:scale-95"
                 disabled={isSubmitting}
               >
                 Send
