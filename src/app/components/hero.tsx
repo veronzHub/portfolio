@@ -104,7 +104,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.div
-              className="order-1 md:absolute md:-right-32 lg:-right-10 md:-top-20 z-20"
+              className="order-1 md:absolute md:-right-32 lg:-right-10 md:-top-20 z-20 pointer-events-none"
               variants={imageVariants}
             >
               <Image
