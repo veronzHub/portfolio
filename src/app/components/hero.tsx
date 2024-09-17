@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const containerVariants = {
   visible: {
@@ -34,15 +34,13 @@ const imageVariants = {
 };
 
 export default function Hero() {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 100]);
-
-  const handleScroll = () => {
-    const section = document.getElementById("contact");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+  function handleContactClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
     }
-  };
+  }
 
   return (
     <>
@@ -84,12 +82,13 @@ export default function Hero() {
                   </Link>
                 </li>
                 <li>
-                  <div
+                  <Link
+                    href="#contact"
                     className="inline-block bg-secondary rounded-full p-4 transition-transform duration-200 ease-in-out hover:brightness-125 hover:scale-105 active:scale-95 cursor-pointer"
-                    onClick={handleScroll}
+                    onClick={(e) => handleContactClick(e)}
                   >
                     <MdEmail className="text-white text-3xl" />
-                  </div>
+                  </Link>
                 </li>
                 <li>
                   <Link
