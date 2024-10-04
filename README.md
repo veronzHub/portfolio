@@ -9,7 +9,6 @@ This portfolio showcases my skills and experience as a Front-End Developer, incl
 ## Technologies Used
 
 - **Next.js**: For server-side rendering and a seamless React experience.
-- **Supabase**: Backend for handling the contact form submissions and database.
 - **Framer Motion**: For animations and transitions throughout the site.
 - **Formik**: For form handling in the contact section.
 - **hCaptcha**: Used in the contact form for bot protection.

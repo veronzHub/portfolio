@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { FormikHelpers, Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { createClient } from "@/app/utils/supabase/client";
 
 interface FormValues {
   name: string;
@@ -17,15 +16,11 @@ const validationSchema = Yup.object().shape({
 });
 
 export default function ContactForm() {
-  const supabase = createClient();
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [captchaError, setCaptchaError] = useState(false);
 
-  const handleSubmit = async (
-    values: FormValues,
-    { setSubmitting }: FormikHelpers<FormValues>
-  ) => {
+  const handleSubmit = async (values: FormValues, { setSubmitting }: any) => {
     setCaptchaError(false);
 
     if (!captchaToken) {
@@ -34,15 +29,35 @@ export default function ContactForm() {
       return;
     }
 
-    const { error } = await supabase.from("contact_form").insert([values]);
+    const jsonPayload = {
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY as string,
+      name: values.name,
+      email: values.email,
+      message: values.message,
+    };
 
-    if (error) {
-      console.error("Error inserting data:", error);
-    } else {
-      setSubmitted(true);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(jsonPayload),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        console.error("Error sending message:", result);
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+    } finally {
+      setSubmitting(false);
     }
-
-    setSubmitting(false);
   };
 
   return (
@@ -133,10 +148,16 @@ export default function ContactForm() {
 
               <button
                 type="submit"
-                className="bg-primary text-white p-3 rounded-md w-full mt-5 transition-transform duration-200 ease-in-out hover:brightness-125 hover:scale-105 active:scale-95"
+                className="bg-primary text-white p-3 rounded-md w-full mt-5 transition-transform duration-200 ease-in-out hover:brightness-125 hover:scale-105 active:scale-95 flex justify-center items-center"
                 disabled={isSubmitting}
               >
-                Send
+                {isSubmitting ? (
+                  <span
+                    className="inline-block w-5 h-5 border-2 border-t-2 border-white border-t-transparent rounded-full animate-spin mr-2"
+                    aria-hidden="true"
+                  ></span>
+                ) : null}
+                {isSubmitting ? "Sending..." : "Send"}
               </button>
             </Form>
           )}
