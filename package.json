@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@hcaptcha/react-hcaptcha": "^1.11.0",
-    "@supabase/ssr": "^0.5.1",
     "autoprefixer": "^10.4.20",
     "formik": "^2.4.6",
     "framer-motion": "^11.5.4",
